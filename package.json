@@ -1,0 +1,28 @@
+{
+  "name": "z-index",
+  "version": "0.0.1",
+  "author": "Jason Xie",
+  "description": "Get a list of z-indexes used in your project",
+  "module": "index.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thejasonxie/z-index"
+  },
+  "keywords": [
+    "z-index",
+    "css"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2"
+  },
+  "bin": {
+    "z-index": "./index.ts"
+  }
+}
