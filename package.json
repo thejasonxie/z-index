@@ -1,6 +1,6 @@
 {
   "name": "z-index-list",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jason Xie",
   "description": "Get a list of z-indexes used in your project",
   "module": "index.ts",
