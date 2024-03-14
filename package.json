@@ -1,6 +1,6 @@
 {
   "name": "z-index-list",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Jason Xie",
   "description": "Get a list of z-indexes used in your project",
   "module": "index.ts",
@@ -11,7 +11,9 @@
   },
   "keywords": [
     "z-index",
-    "css"
+    "css",
+    "html",
+    "styles"
   ],
   "devDependencies": {
     "@types/bun": "latest"
