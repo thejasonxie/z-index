@@ -23,6 +23,6 @@
     "fast-glob": "^3.3.2"
   },
   "bin": {
-    "z-index": "./index.ts"
+    "z-index-list": "./index.ts"
   }
 }
