@@ -1,9 +1,10 @@
 {
   "name": "z-index-list",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Jason Xie",
   "description": "Get a list of z-indexes used in your project",
-  "module": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "repository": {
     "type": "git",
@@ -15,8 +16,13 @@
     "html",
     "styles"
   ],
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "tsup": "^8.0.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -25,6 +31,6 @@
     "fast-glob": "^3.3.2"
   },
   "bin": {
-    "z-index-list": "./index.ts"
+    "z-index-list": "./dist/index.js"
   }
 }

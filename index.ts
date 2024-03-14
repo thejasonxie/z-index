@@ -1,12 +1,20 @@
 #!/usr/bin/env node
 
 import fg from "fast-glob";
+import fs from "fs";
 
 const main = async () => {
-  const gitIgnore = (await Bun.file(".gitignore").text())
-    .split("\n")
-    .filter((line) => line.length > 0 && line[0] !== "#")
-    .map((line) => (line.endsWith("/") ? line.slice(0, -1) : line));
+  let gitIgnore: string[] = [];
+  try {
+    gitIgnore = fs
+      .readFileSync(".gitignore", "utf8")
+      .toString()
+      .split("\n")
+      .filter((line) => line.length > 0 && line[0] !== "#")
+      .map((line) => (line.endsWith("/") ? line.slice(0, -1) : line));
+  } catch (e) {
+    console.log("No .gitignore file found");
+  }
 
   const entries = (
     await fg("**/*", {
@@ -26,7 +34,7 @@ const main = async () => {
 
   const valueWidth = 8;
   for (const entry of entries) {
-    const content = await Bun.file(entry).text();
+    const content = fs.readFileSync(entry, "utf8").toString();
 
     let index = 0;
     while (index != -1) {
