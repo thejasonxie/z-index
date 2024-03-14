@@ -1,5 +1,5 @@
 {
-  "name": "z-index",
+  "name": "z-index-list",
   "version": "0.0.1",
   "author": "Jason Xie",
   "description": "Get a list of z-indexes used in your project",
@@ -7,7 +7,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thejasonxie/z-index"
+    "url": "https://github.com/thejasonxie/z-index-list"
   },
   "keywords": [
     "z-index",
